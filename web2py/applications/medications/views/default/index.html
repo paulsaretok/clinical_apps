@@ -1,5 +1,5 @@
 {{extend 'layout.html'}}
-<h1>Current Images</h1>
+<h2>Current Images</h2>
 <ul>
 {{for image in images:}}
 {{=LI(A(image.title, _href=URL("show", args=image.id)))}}

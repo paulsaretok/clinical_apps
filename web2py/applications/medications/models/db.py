@@ -59,3 +59,5 @@ db.document.name.requires = IS_NOT_IN_DB(db, 'document.name')
 db.document.page_id.readable = db.document.page_id.writable = False
 db.document.created_by.readable = db.document.created_by.writable = False
 db.document.created_on.readable = db.document.created_on.writable = False
+
+db.define_table('thing',Field('name',requires=IS_NOT_EMPTY()))

@@ -26,3 +26,6 @@ def user():
     return dict(form=auth())
 
 
+@auth.requires_login()
+def manage_things():
+    return SQLFORM.grid(db.thing)
